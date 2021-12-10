@@ -8,7 +8,7 @@
                     color: #ff0000;}
       .container {display:flex;
                   flex-direction: row; }
-        #introductionofme <b>; {background-color: grey;
+        #introductionofme {background-color: grey;
          border: 1pt; }
       </style>
             <h1 class= "header"> <i>Quiedah's Third Webpage!</i></h1>

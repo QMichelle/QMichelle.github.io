@@ -2,6 +2,7 @@
 <html>
     <head>
     <title> Quiedah's Mini-Project #2 CSS</title>
+  </head>
       <style>
       p { font-family: fantasy;}
       h1, h2, h3 { font-family: serif;
@@ -12,7 +13,7 @@
          border: 1pt; }
       </style>
             <h1 class= "header"> <i>Quiedah's Third Webpage!</i></h1>
-          <div id= "introductionofme" class= "container">
+          <div id= "introductionofme!" class= "container">
             <h2 class= "header"> Introduction of Me!</h2>
                     <p>
                     I am a Senior at <a href="https://www.msudenver.edu"> Metropolitan State University of Denver </a>.
@@ -25,9 +26,8 @@
                     As we all know, the future is always changing and we never know what is the outcome, so enjoy the journey!
                   </p>
                 </div>
-
                   <h3 class= "header">
-                  <div id="classes1" class="container">
+                  <div>
                     I have a few classes to complete for my
                    <a href="https://catalog.msudenver.edu/preview_program.php?catoid=38&poid=9556&returnto=2676"> GIS Minor </a>:</h3>
                     <ul>
@@ -35,7 +35,7 @@
                       <li> <strong> <b> GIS Programming </b> </strong> </li>
                     </ul>
                   </div>
-                  <div id "classes2" class="container">
+                  <div>
                     <h3 class= "header"> Courses that I have found to be challenging</h3>
                     <ol>
                         <li>CS </li>

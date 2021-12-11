@@ -5,7 +5,7 @@
       <style>
       p { font-family: fantasy;}
       h1, h2, h3 { font-family: serif;
-                    color: #ff0000;}
+                    color: midnightblue;}
       .container {display:flex;
                   flex-direction: row; }
         #introductionofme {background-color: grey;
@@ -28,7 +28,6 @@
 
                   <h3 class= "header">
                   <div id="classes1" class="container">
-
                     I have a few classes to complete for my
                    <a href="https://catalog.msudenver.edu/preview_program.php?catoid=38&poid=9556&returnto=2676"> GIS Minor </a>:</h3>
                     <ul>

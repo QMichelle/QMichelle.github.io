@@ -19,14 +19,53 @@
         var finished = false; // change to the true when the game is finished
         
         $("#guesses").html(guesses);
-        $("#word").html(blanks);{
+        $("#word").html(blanks);
         
         // run this when a letter is clicked on
         $(".letter").click(function(e){
         
         //change the text decoration for the letter
-        $("#"+letter).css("text-decoration", "line-through");{
+        $("#"+letter).css("text-decoration", "line-through");
          
+        // check if the letter has already been guessed
+          if (guessed.includes(letter)) {
+            $("messages").text("The letter"+letter + "has already been guessed.");
+            } else {
+          
+         // add the letter to array of guessed
+          guessed = guessed + letter;   
+              
+         //subtract a guess
+          guesses = guesses - 1;
+          $("#guesses").html(guesses);
+          if (guesses < = 0)   {
+          $("#messages").text("Out of guesses! You Lose!");
+          finished = true;
+          }     
+              
+         // stop the function if the game is over
+          if (finished) { return; }
+          
+          // get the letter
+          var letter = $(e.ticket).text ();
+          console.log("clicked on", letter);
+          
+          //check the Letters in word and see if there's a match
+   	       var count = 0;
+   	       for (l of word) {
+      	  if (l == letter) {
+          blanks = blanks.substring(0, count) + letter +
+                  blanks.substring((count+1),blanks.length);
+        }
+          count = count + 1;
+    } 
+          // update the blanks
+          $("#word").html(blanks);
+
+            // check if we've won
+        	if (! blanks.includes "-")) {
+            finished = true;
+            $("#messages").text("You Won!");
                          }
 
           }

@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hangman!</title>
+  <style>
+    p { font-size: 24pt;}
+    #game { width: 50%; margin: auto; }
+    #messages { color: red; }
+    </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+}
+
+  <script>
+  // $(document) is the jQuery reference to the whole web page
+      $(document),ready(function() {
+        // put your javascript here
+        var word = "bobafett"; // the word to guess
+        var blanks = "--------"; // this variable holds the temporary information
+        var guesses = 10; //the number of guesses left
+        var guessed = []; //these are the letters that have already been guesses
+        var finished = false; // change to the true when the game is finished
+      });
+
+  </script>
+      </head>
+      <body>
+      <div id="game">
+      <p>The word to guess is <b><span id="word"></span></b>.</p>
+      <p>There are <span id="guesses"></span> guesses left.</p>
+      <p><i>Click on a letter below to play.</i></p>
+      <p>
+      <span class="letter" id="a">a</span>
+      <span class="letter" id="b">b</span>
+      <span class="letter" id="c">c</span>
+      <span class="letter" id="d">d</span>
+      <span class="letter" id="e">e</span>
+      <span class="letter" id="f">f</span>
+      <span class="letter" id="g">g</span>
+      <span class="letter" id="h">h</span>
+      <span class="letter" id="i">i</span>
+      <span class="letter" id="j">j</span>
+      <span class="letter" id="k">k</span>
+      <span class="letter" id="l">l</span>
+      <span class="letter" id="m">m</span>
+      <span class="letter" id="n">n</span>
+      <span class="letter" id="o">o</span>
+      <span class="letter" id="p">p</span>
+      <span class="letter" id="q">q</span>
+      <span class="letter" id="r">r</span>
+      <span class="letter" id="s">s</span>
+      <span class="letter" id="t">t</span>
+      <span class="letter" id="u">u</span>
+      <span class="letter" id="v">v</span>
+      <span class="letter" id="w">w</span>
+      <span class="letter" id="x">x</span>
+      <span class="letter" id="y">y</span>
+      <span class="letter" id="z">z</span>
+      </p>
+      <p id="messages"></p>
+      </div>
+<script>
+        $("#guesses").html(guesses);
+        $("#word").html(blanks);
+
+        $(".letter").click(function(e){
+          // run this when a letter is clicked on
+
+          // stop the function if the game is over
+          if (finished) { return; }
+
+          // get the letter
+          var letter = $(e.ticket).text ();
+          console.log("clicked on", letter);
+
+          //change the text decoration for the letter
+          $("#"+letter).css("text-decoration", "line-through");
+
+          // check if the letter has already been guessed
+          if (guessed.includes(letter)) {
+            $("messages").text("The letter"+letter + "has already been guessed.");
+            } else {
+          // add the letter to array of guessed
+          guessed = guessed + letter;
+          //subtract a guess
+          guesses = guesses - 1;
+          $("#guesses").html(guesses);
+          if (guesses <= 0)   {
+          $("#messages").text("Out of guesses! You Lose!");
+          finished = true;
+          }
+      }
+
+      //check the Letters in word and see if there's a match
+      var count = 0;
+      for (l of word) {
+        if (l == leter) {
+          blanks = blanks.substring(0, count) + letter +
+                  blanks.substring((count+1),blanks.length);
+        }
+          count = count + 1;
+    }
+        // update the blanks
+        $("#word").html(blanks);
+
+        // check if we've won
+        if (! blanks.includes "-")) {
+            finished = true;
+            $("#messages").text("You Won!");
+          }
+
+
+
+            });
+
+        });
+
+    </script>
+  </head>

@@ -14,14 +14,15 @@
         // put your javascript here
         var word = "bobafett"; // the word to guess
         var blanks = "--------"; // this variable holds the temporary information
-        var guesses = 10; //the number of guesses left
-        var guessed = []; //these are the letters that have already been guesses
+        var guesses = 15; //the number of guesses left
+        var guessed = []; //these are the letters that have already been guesses // array for guesses.
         var finished = false; // change to the true when the game is finished
         
-        $("#guesses").html(guesses);
-        $("#word").html(blanks);
-        
-        }
+            $("#guesses").html(guesses);  // this takes the var guesses into the array
+            $("#word").html(blanks);  //fills in the blanks if properly guessed.
+
+        });
+  
   </script>
   </head>              <body>
                     <div id="game">

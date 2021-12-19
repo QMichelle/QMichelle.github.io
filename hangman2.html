@@ -45,7 +45,22 @@
     if (guesses < = 0)   {
     $("#messages").text("Out of guesses! You Lose!");
     finished = true;
- 
+        //check the Letters in word and see if there's a match
+    var count = 0;
+    for (l of word) {
+      if (l == letter) {
+        blanks = blanks.substring(0, count) + letter +
+                blanks.substring((count+1),blanks.length);
+  }
+    count = count + 1;
+}
+    // update the blanks
+    $("#word").html(blanks);
+    }
+      // check if we've won
+    if (! blanks.includes "-")) {
+      finished = true;
+      $("#messages").text("You Won!");
  
        
 

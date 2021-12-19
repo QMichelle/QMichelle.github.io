@@ -20,6 +20,9 @@
         
      
         $(".letter").click(function(){
+          
+          $("#guesses").html(guesses);
+          $("#word").html(blanks);
         
     // stop the function if the game is over
     if (finished) { return; }

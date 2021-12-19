@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hangman!</title>
+  <style>
+     p { font-size: 24pt;}
+     #game { width: 50%; margin: auto; }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
+      // $(document) is the jQuery reference to the whole web page
+      $(document).ready( function() {
+        // put your javascript here
+        var word =   "h a n g m a n"; // the word to guess
+        var blanks = "- - - - - - -"; // this variable holds the temporary information
+        var guesses = 10; // the number of guesses left
+        var guessed  = []; // these are the letters that have already been guessed
+        var finished = false; // change to true when the game is finished
+
+
+      });
+
+  </script>
+</head>
+<body>
+  <div id="game">
+  <p>The word to guess is <b><span id="word"></span></b>.</p>
+  <p>There are <span id="guesses"></span> guesses left.</p>
+  <p><i>Click on a letter below to play.</i></p>
+  <p>
+    <span class="letter" id="a">a</span>
+    <span class="letter" id="b">b</span>
+    <span class="letter" id="c">c</span>
+    <span class="letter" id="d">d</span>
+    <span class="letter" id="e">e</span>
+    <span class="letter" id="f">f</span>
+    <span class="letter" id="g">g</span>
+    <span class="letter" id="h">h</span>
+    <span class="letter" id="i">i</span>
+    <span class="letter" id="j">j</span>
+    <span class="letter" id="k">k</span>
+    <span class="letter" id="l">l</span>
+    <span class="letter" id="m">m</span>
+    <span class="letter" id="n">n</span>
+    <span class="letter" id="o">o</span>
+    <span class="letter" id="p">p</span>
+    <span class="letter" id="q">q</span>
+    <span class="letter" id="r">r</span>
+    <span class="letter" id="s">s</span>
+    <span class="letter" id="t">t</span>
+    <span class="letter" id="u">u</span>
+    <span class="letter" id="v">v</span>
+    <span class="letter" id="w">w</span>
+    <span class="letter" id="x">x</span>
+    <span class="letter" id="y">y</span>
+    <span class="letter" id="z">z</span>
+  </p>
+  <p id="messages"></p>
+</div>
+
+</body>

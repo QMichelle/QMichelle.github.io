@@ -19,8 +19,33 @@
         var finished = false; // change to true when the game is finished
         
      
-        $(".letter").click(function(e){
-         
+        $(".letter").click(function(){
+        
+    // stop the function if the game is over
+    if (finished) { return; }
+
+    // get the letter
+    var letter = $(e.ticket).text ();
+    console.log("clicked on", letter);
+
+      //change the text decoration for the letter
+      $("#"+letter).css("text-decoration", "line-through");
+
+      // check if the letter has already been guessed
+      if (guessed.includes(letter)) {
+        $("#messages").text("The letter"+letter + "has already been guessed.");
+      } else {
+
+        // add the letter to array of guessed
+        guessed = guessed + letter;
+
+        //subtract a guess
+        guesses = guesses - 1;
+    $("#guesses").html(guesses);
+    if (guesses < = 0)   {
+    $("#messages").text("Out of guesses! You Lose!");
+    finished = true;
+ 
  
        
 

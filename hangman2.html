@@ -18,9 +18,12 @@
         var guessed  = []; // these are the letters that have already been guessed
         var finished = false; // change to true when the game is finished
         
-         $(".letter").click(function(){
+        $("#guesses").html(guesses);
+         $("#word").html(blanks);
+        
+        $(".letter").click(function(){
          
-             if (finished) { return; }
+         
        
 
       });

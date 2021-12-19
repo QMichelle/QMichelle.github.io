@@ -27,8 +27,12 @@
         var guessed  = []; // these are the letters that have already been guessed
         var finished = false; // change to true when the game is finished
         
-     
-     
+       if (guessed.includes(letter)) {
+        $("#messages").text("The letter"+letter + "has already been guessed.");
+      } else {
+            }
+
+    }
        
 
       });
